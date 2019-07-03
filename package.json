@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "microplugin": "0.0.3",
-    "sifter": "^0.5.1"
+    "sifter": "^0.5.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "grunt": "0.4.x",
@@ -49,9 +50,12 @@
     "karma-sauce-launcher": "^0.2.10"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start"
+    "test": "./node_modules/karma/bin/karma start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": "*"
-  }
+  },
+  "snyk": true
 }
